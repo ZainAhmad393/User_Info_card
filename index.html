@@ -3,25 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Info Card</title>
+    <title>Alystra | Premium User Interface</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="form">
-        <h2>Fill the Form</h2>
-        <form action="#" id="form-data">
-            <input type="text" name="name" id="name" placeholder="Enter Name">
-            <input type="number" name="age" id="age" placeholder="Enter Age">
-            <input type="email" name="email" id="email" placeholder="Enter Email">
-            <button type="submit" class="btn-submit">Submit</button>
+  <div class="container">
+    <div class="card form-container">
+        <div class="logo"></div>
+        <h2>Create <span class="gradient-text">ID</span> </h2>
+        <form id="form-data">
+            <div class="input-box">
+                <input type="text" id="name" required>
+                <label>Full Name</label>
+            </div>
+            <div class="input-box">
+                <input type="number" id="age" required>
+                <label>Your Age</label>
+            </div>
+            <div class="input-box">
+                <input type="email" id="email" required>
+                <label>Email Address</label>
+            </div>
+            <button type="submit" class="submit-btn">
+                <span>Generate Profile</span>
+            </button>
         </form>
     </div>
-    <div class="profile-card" id="profile-card">
-        <h3 id="displayname"></h3>
-        <p id="displayage"></p> 
-        <p id="displayemail"></p>
-        <button class="btn-color" id="change-color">Change Color</button>   
+
+    <div class="card result-card" id="profile-card">
+        <div class="profile-header">
+            <div class="avatar-glow"></div>
+            <h3 id="displayname"></h3>
+        </div>
+        <div class="stats">
+            <div class="stat-item">
+                <small>Age</small>
+                <p id="displayage"></p>
+            </div>
+            <div class="stat-item">
+                <small>Status</small>
+                <p>Verified</p>
+            </div>
+        </div>
+        <div class="email-box">
+            <p id="displayemail"></p>
+        </div>
+        <button id="change-color" class="action-btn">Switch Theme</button>
     </div>
+</div>
     <script src="JS.js"></script>
 </body>
 </html>
